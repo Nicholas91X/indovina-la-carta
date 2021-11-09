@@ -62,6 +62,7 @@
 #risultato {
     height: 20px;
     padding: 10px;
+    font-size: 12px;
     display: flex;
     align-items: center;
     border: 3px solid black;
