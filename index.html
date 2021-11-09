@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Indovina la carta</title>
+</head>
+<body>
+    <div class="container">
+        <button class="btn">Scopri</button>
+        <div class="card">Indovina la carta</div>
+        <div class="container-risultato">
+            <form>
+                <select id="select-card">
+                    <option value="Asso di Picche">Asso di Picche</option>
+                    <option value="Asso di Fiori">Asso di Fiori</option>
+                    <option value="Asso di Quadri">Asso di Quadri</option>
+                    <option value="Asso di Cuori">Asso di Cuori</option>
+                    <option value="Re di Picche">Re di Picche</option>
+                    <option value="Re di Fiori">Re di Fiori</option>
+                    <option value="Re di Quadri">Re di Quadri</option>
+                    <option value="Re di Cuori">Re di Cuori</option>
+                    <option value="Joker">Joker</option>
+                </select>
+            </form>
+            <div id="segnale-risultato">
+
+            </div>
+            <div id="risultato">
+                Carta estratta
+            </div>
+        </div>
+        <div class="container-denaro">
+            <div id="differenze"></div>
+            <div id="monete"></div>
+            <div class="img-monete">
+                <img class="w-100" src="img/pila di monete.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
