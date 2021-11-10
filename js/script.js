@@ -79,6 +79,7 @@ scopri.addEventListener("click", function(){
         document.getElementById("differenze").innerHTML = -puntata;
         soldi = soldi - (puntata);
     }
+
     document.getElementById("risultato").innerHTML = x;
     document.getElementById("monete").innerHTML = soldi;
     console.log(soldi);
