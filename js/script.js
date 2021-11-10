@@ -15,6 +15,7 @@ const jolly = `<img class="w-100" src="img/Jolly.jpg">`;
 
 scopri.addEventListener("click", function(){
     let x = 0;
+    let puntata = document.getElementById("puntata").value;
     let scelta = document.getElementById("select-card").value;
     console.log(scelta);
     const num = Math.floor(Math.random() * 10);
@@ -63,11 +64,11 @@ scopri.addEventListener("click", function(){
     }
 
     if (scelta == x) {
-        soldi = soldi + 20;
+        soldi = soldi + (puntata * 10);
         document.getElementById("segnale-risultato").innerHTML = "Grande!!!";
         document.getElementById("differenze").classList.remove("crimson");
         document.getElementById("differenze").classList.add("verde");
-        document.getElementById("differenze").innerHTML = "+20";
+        document.getElementById("differenze").innerHTML = "+"+puntata * 10;
         setTimeout(function() {
             alert("Hai indovinato!");
         }, 200);
@@ -75,8 +76,8 @@ scopri.addEventListener("click", function(){
         document.getElementById("segnale-risultato").innerHTML = "Riprova";
         document.getElementById("differenze").classList.remove("verde");
         document.getElementById("differenze").classList.add("crimson");
-        document.getElementById("differenze").innerHTML = "-1";
-        soldi = soldi - 1;
+        document.getElementById("differenze").innerHTML = -puntata;
+        soldi = soldi - (puntata);
     }
     document.getElementById("risultato").innerHTML = x;
     document.getElementById("monete").innerHTML = soldi;
