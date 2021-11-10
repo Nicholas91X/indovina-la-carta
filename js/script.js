@@ -1,5 +1,7 @@
 let soldi = 100;
-document.getElementById("monete").innerHTML = soldi;
+let monete = document.getElementById("monete");
+monete.innerHTML = soldi;
+let segnale = document.getElementById("segnale-risultato");
 const scopri = document.querySelector(".btn");
 const card = document.querySelector(".card");
 const assoCuori = `<img class="w-100" src="img/Asso Cuori.jpg">`;
@@ -15,6 +17,7 @@ const jolly = `<img class="w-100" src="img/Jolly.jpg">`;
 
 scopri.addEventListener("click", function(){
     let x = 0;
+    let differenze = document.getElementById("differenze");
     let puntata = document.getElementById("puntata").value;
     let scelta = document.getElementById("select-card").value;
     console.log(scelta);
@@ -65,23 +68,23 @@ scopri.addEventListener("click", function(){
 
     if (scelta == x) {
         soldi = soldi + (puntata * 10);
-        document.getElementById("segnale-risultato").innerHTML = "Grande!!!";
-        document.getElementById("differenze").classList.remove("crimson");
-        document.getElementById("differenze").classList.add("verde");
-        document.getElementById("differenze").innerHTML = "+"+puntata * 10;
+        segnale.innerHTML = "Grande!!!";
+        differenze.classList.remove("crimson");
+        differenze.classList.add("verde");
+        differenze.innerHTML = "+"+puntata * 10;
         setTimeout(function() {
             alert("Hai indovinato!");
         }, 200);
     } else {
-        document.getElementById("segnale-risultato").innerHTML = "Riprova";
-        document.getElementById("differenze").classList.remove("verde");
-        document.getElementById("differenze").classList.add("crimson");
-        document.getElementById("differenze").innerHTML = -puntata;
+        segnale.innerHTML = "Riprova";
+        differenze.classList.remove("verde");
+        differenze.classList.add("crimson");
+        differenze.innerHTML = -puntata;
         soldi = soldi - (puntata);
     }
 
     document.getElementById("risultato").innerHTML = x;
-    document.getElementById("monete").innerHTML = soldi;
+    monete.innerHTML = soldi;
     console.log(soldi);
 })
 
